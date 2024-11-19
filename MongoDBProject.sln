@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35410.144
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBWebAPI", "src\MongoDBWebAPI\MongoDBWebAPI.csproj", "{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E2FE8520-2960-4553-B795-E2A1BBDAD6FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{279FCB0B-FE54-450E-876F-F74A70CF8A84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E} = {279FCB0B-FE54-450E-876F-F74A70CF8A84}
+	EndGlobalSection
+EndGlobal
