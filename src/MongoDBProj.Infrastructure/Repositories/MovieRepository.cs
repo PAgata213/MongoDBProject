@@ -30,12 +30,15 @@ internal class MovieRepository : IMovieRepository
 	public async Task UpdateMovie(Movie movie)
 	{
 		var filter = Builders<Movie>.Filter.Eq(x => x.Id, movie.Id);
-		var update = Builders<Movie>.Update
-			.Set(x => x.Title, movie.Title)
-			.Set(x => x.Description, movie.Description)
-			.Set(x => x.Name, movie.Name);
+		//var update = Builders<Movie>.Update
+		//	.Set(x => x.Title, movie.Title)
+		//	.Set(x => x.Description, movie.Description)
+		//	.Set(x => x.Name, movie.Name);
+		//await _movieCollection.UpdateOneAsync(filter, update);
 
-		await _movieCollection.UpdateOneAsync(filter, update);
+		//OR
+
+		await _movieCollection.ReplaceOneAsync(filter, movie);
 	}
 
 	public async Task DeleteMovie(Guid movieId)
