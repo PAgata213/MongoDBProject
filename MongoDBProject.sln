@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35410.144
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBWebAPI", "src\MongoDBWebAPI\MongoDBWebAPI.csproj", "{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBProj.WebAPI", "src\MongoDBWebAPI\MongoDBProj.WebAPI.csproj", "{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E2FE8520-2960-4553-B795-E2A1BBDAD6FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{279FCB0B-FE54-450E-876F-F74A70CF8A84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBProj.Infrastructure", "src\MongoDBProj.Infrastructure\MongoDBProj.Infrastructure.csproj", "{DAFBEB4E-21AF-428D-ABAE-284D3B5B8EB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBProj.Domain", "src\MongoDBProj.Domain\MongoDBProj.Domain.csproj", "{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,11 +23,21 @@ Global
 		{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAFBEB4E-21AF-428D-ABAE-284D3B5B8EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFBEB4E-21AF-428D-ABAE-284D3B5B8EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFBEB4E-21AF-428D-ABAE-284D3B5B8EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFBEB4E-21AF-428D-ABAE-284D3B5B8EB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B4A459E0-E2BA-477B-AEDF-2D7FFF698D3E} = {279FCB0B-FE54-450E-876F-F74A70CF8A84}
+		{DAFBEB4E-21AF-428D-ABAE-284D3B5B8EB9} = {279FCB0B-FE54-450E-876F-F74A70CF8A84}
+		{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0} = {279FCB0B-FE54-450E-876F-F74A70CF8A84}
 	EndGlobalSection
 EndGlobal
