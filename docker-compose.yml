@@ -1,0 +1,31 @@
+services:
+  mongodbproj.webapi:
+    image: ${DOCKER_REGISTRY-}mongodbprojwebapi
+    build:
+      context: .
+      dockerfile: src/MongoDBWebAPI/Dockerfile
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - inner-network
+
+  mongodb:
+    image: mongodb/mongodb-community-server:7.0.1-ubi8
+    container_name: mongodb_node
+    ports:
+      - "27017:27017"
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - inner-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+
+networks:
+  inner-network:
+    name: inner-network
+
+volumes:
+  dbdata:
+    driver: local

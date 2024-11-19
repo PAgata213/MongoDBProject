@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBProj.Infrastructure"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBProj.Domain", "src\MongoDBProj.Domain\MongoDBProj.Domain.csproj", "{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C5CAF7A7-5167-4604-B384-D75FAE7F6244}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6940CAFC-9B02-4DB2-935A-ED2BF4DE3AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5CAF7A7-5167-4604-B384-D75FAE7F6244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CAF7A7-5167-4604-B384-D75FAE7F6244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CAF7A7-5167-4604-B384-D75FAE7F6244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CAF7A7-5167-4604-B384-D75FAE7F6244}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
