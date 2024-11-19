@@ -6,7 +6,7 @@ public record Movie
 {
 	[BsonId]
 	[BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
-	public Guid Id { get; init; }
+	public string Id { get; init; } = default!;
 
 	[BsonElement("name"), BsonRepresentation(BsonType.String)]
 	public string? Name { get; set; }

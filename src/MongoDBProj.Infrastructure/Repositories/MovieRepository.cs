@@ -16,18 +16,18 @@ internal class MovieRepository : IMovieRepository
 		_movieCollection = _mongoDBContext.DataBase.GetCollection<Movie>("movie");
 	}
 
-	public async Task<ICollection<Movie>> GetMovies()
+	public async Task<ICollection<Movie>> GetMoviesAsync()
 		=> await _movieCollection.Find(FilterDefinition<Movie>.Empty).ToListAsync();
 
-	public async ValueTask<Movie> GetMovieById(Guid movieId)
+	public async ValueTask<Movie> GetMovieByIdAsync(string movieId)
 		=> await _movieCollection
 				.Find(Builders<Movie>.Filter.Eq(x => x.Id, movieId))
 				.FirstOrDefaultAsync();
 
-	public async Task CreateMovie(Movie movie)
+	public async Task CreateMovieAsync(Movie movie)
 		=> await _movieCollection.InsertOneAsync(movie);
 
-	public async Task UpdateMovie(Movie movie)
+	public async Task UpdateMovieAsync(Movie movie)
 	{
 		var filter = Builders<Movie>.Filter.Eq(x => x.Id, movie.Id);
 		//var update = Builders<Movie>.Update
@@ -41,7 +41,7 @@ internal class MovieRepository : IMovieRepository
 		await _movieCollection.ReplaceOneAsync(filter, movie);
 	}
 
-	public async Task DeleteMovie(Guid movieId)
-		=> await _movieCollection.DeleteOneAsync(Builders<Movie>.Filter.Eq(x => x.Id,movieId));
+	public async Task DeleteMovieAsync(string movieId)
+		=> await _movieCollection.DeleteOneAsync(Builders<Movie>.Filter.Eq(x => x.Id, movieId));
 
 }
