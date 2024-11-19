@@ -1,4 +1,7 @@
+using MongoDBProj.Domain.Models;
 using MongoDBProj.Infrastructure;
+using MongoDBProj.Infrastructure.DbContext;
+using MongoDBProj.WebAPI.WebAPI;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,11 +13,19 @@ builder.Services.RegisterIntrastructure();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if(app.Environment.IsDevelopment())
+using(var scope = app.Services.CreateScope())
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
+	var dbContext = scope.ServiceProvider.GetService<IMongoDbContext>();
+	await dbContext!.DataBase.CreateCollectionAsync("movie");
 }
+
+	// Configure the HTTP request pipeline.
+	if(app.Environment.IsDevelopment())
+	{
+		app.UseSwagger();
+		app.UseSwaggerUI();
+	}
+
+app.RegisterMovieWebAPI();
 
 app.Run();
