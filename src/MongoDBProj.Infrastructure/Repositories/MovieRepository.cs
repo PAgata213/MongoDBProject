@@ -37,11 +37,9 @@ internal class MovieRepository : IMovieRepository
 		//await _movieCollection.UpdateOneAsync(filter, update);
 
 		//OR
-
 		await _movieCollection.ReplaceOneAsync(filter, movie);
 	}
 
-	public async Task DeleteMovieAsync(string movieId)
+	public async Task DeleteMovieAsync(string movieId) 
 		=> await _movieCollection.DeleteOneAsync(Builders<Movie>.Filter.Eq(x => x.Id, movieId));
-
 }
